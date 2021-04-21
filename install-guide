@@ -1,0 +1,6 @@
+Docker install guide
+
+1) Install Zeppelin :
+   docker run -d -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.8.0
+   
+ 2)
