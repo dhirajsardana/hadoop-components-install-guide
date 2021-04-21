@@ -1,0 +1,16 @@
+Download spark from Apache spark website and unzip the same
+---After this few steps so that u can execute ur spark jobs:
+Goto sbin directory of spark installation(Example : /spark-3.0.1-bin-hadoop2.7/sbin) and start master and workers(slave)
+  1) Start spark master :
+     ./start-master.sh
+
+  2) After starting master start worker from same directory:
+      ./start-slave.sh spark://localhost:7077
+
+Now, you can see your jobs on master web url(Check in master logs port can be different) : http://localhost:8081/
+
+You can verfiy with simple examples via spark-shell :
+
+   bin/spark-shell --master spark://localhost:7077
+   spark.read.csv("/files/test.csv").count
+  You can see your shell job in master web UI.
